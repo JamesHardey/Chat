@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_page_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.jcoding.zurichat.ui.homepage.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_newChannelFragment"
+            app:destination="@id/newChannelFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_savedMessagesFragment"
+            app:destination="@id/savedMessagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newChannelFragment"
+        android:name="com.jcoding.zurichat.ui.homepage.NewChannelFragment"
+        android:label="fragment_new_channel"
+        tools:layout="@layout/fragment_new_channel" />
+    <fragment
+        android:id="@+id/savedMessagesFragment"
+        android:name="com.jcoding.zurichat.ui.homepage.SavedMessagesFragment"
+        android:label="fragment_saved_messages"
+        tools:layout="@layout/fragment_saved_messages" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.jcoding.zurichat.ui.homepage.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

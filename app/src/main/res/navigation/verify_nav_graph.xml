@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/verify_nav_graph"
+    app:startDestination="@id/verificationFragmentOne">
+
+    <fragment
+        android:id="@+id/verificationFragmentOne"
+        android:name="com.jcoding.zurichat.ui.verification.VerificationFragmentOne"
+        android:label="fragment_verification_one"
+        tools:layout="@layout/fragment_verification_one" >
+        <action
+            android:id="@+id/action_verificationFragmentOne_to_verificationFragmentTwo"
+            app:destination="@id/verificationFragmentTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationFragmentTwo"
+        android:name="com.jcoding.zurichat.ui.verification.VerificationFragmentTwo"
+        android:label="fragment_verification_two"
+        tools:layout="@layout/fragment_verification_two" />
+</navigation>
